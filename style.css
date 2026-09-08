@@ -258,35 +258,286 @@ body {
 
 #section3 {
   padding-top: 111px;
-
+  padding-bottom: 111px;
 
   .container {
-      max-width: 1110px;
-    background-color: #a2802c;
+    max-width: 1110px;
     padding: 0 85px;
-    padding-top: 96px;
+    box-sizing: border-box;
   }
+
+  .dark-box {
+    background-color: #2c343e;
+    padding: 96px 0 100px 0;
+    text-align: center;
+  }
+
   h1 {
     font-family: Fraunces;
     font-weight: 900;
-    font-style: #fefcf7;
+    color: #fefcf7;
     font-size: 40px;
     line-height: 120%;
     letter-spacing: 0px;
     text-align: center;
   }
+
   p {
     max-width: 540px;
+    margin: 0 auto;
     font-family: Barlow;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 160%;
     letter-spacing: 0px;
     text-align: center;
+    color: #fefcf7;
+  }
+
+  .boxes-row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
   }
 
   .box {
     background-color: #0e8784;
+    border-radius: 12px;
+    padding: 40px;
+    height: 100%;
+    box-sizing: border-box;
+
+    h4 {
+      font-family: Barlow;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fefcf7;
+      text-align: center;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      color: #d9f2ee;
+      font-size: 15px;
+      max-width: none;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+
+    .icon-img {
+      width: 55%;
+      height: 55%;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+
+    .container {
+      padding: 0 24px;
+    }
+
+    .dark-box {
+      padding: 60px 0 60px 0;
+    }
+
+    .boxes-row {
+      margin-top: -30px;
+    }
+
+    .box {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      text-align: left;
+
+      h4,
+      p {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      h4 {
+        font-size: 17px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .icon-circle {
+      margin: 0;
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+
+    .box-text {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+}
+#section4 {
+.container {
+    max-width: 1110px;
+    padding: 0 85px;
+    box-sizing: border-box;
+  }
+  h2{
+ font-family: Fraunces;
+font-weight: 900;
+font-style: Black;
+font-size: 24px;
+line-height: 150%;
+letter-spacing: 0px;
+color: #83888F;
+  }
+  .steps-line {
+    max-width: 900px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .card {
+    border: none;
+    background: transparent;
+
+    h1 {
+      font-family: Fraunces;
+      font-weight: 900;
+      color: #e0a370;
+      font-size: 72px;
+      line-height: 100%;
+      letter-spacing: 0px;
+      margin-bottom: 16px;
+    }
+
+    h5 {
+      font-family: Fraunces;
+      font-weight: 900;
+      color: #2c343e;
+      font-size: 32px;
+      line-height: 114%;
+      letter-spacing: 0px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-family: Barlow;
+      font-weight: 400;
+      color:#333D4B;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0px;
+      margin: 0;
+    }
+  }
+
+  #cta-btn {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    text-align: center;
+    background-color: #2a8a8a;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  @media (max-width: 767.98px) {
+
+.steps-line{
+  display:none;
+}
+h2{
+  font-size: 20px;
+}
+    .card {
+      align-items: center;
+   
+      h1 {
+        font-size: 48px;
+
+      }
+
+      h5 {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: center;
+        align-items: center;
+
+
+      }
+    }
+  }
+}
+#footer{
+    h1 {
+    color: #FFFFFF;
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  a {
+    font-family: Barlow;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    text-transform: uppercase;
+    color: #83888f;
+  }
+    .container{
+     background-color: #2c343e !important;
+    max-width: 1110px;
+    width: 100%;
+    padding: 0 85px;
+    box-sizing: border-box;
+    height: 100px;
+  }
+   @media (max-width: 767px) {
+    .container {
+      height: auto;         
+      padding: 30px 20px;   
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;       
+    }
+
+    nav {
+      flex-wrap: wrap;      
+      justify-content: center;
+    }
   }
 }
