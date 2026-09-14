@@ -1143,115 +1143,299 @@ body {
       }
     }
   }
-}
 
-#coffeeAccordion {
-  border: none;
-
-  .accordion-item {
-    background: transparent;
+  #coffeeAccordion {
     border: none;
-    border-bottom: 1px solid #e5e2da;
 
-    &:last-child {
-      border-bottom: none;
+    .accordion-item {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #e5e2da;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
-  }
 
-  .accordion-header {
-    margin: 0;
-  }
+    .accordion-header {
+      margin: 0;
+    }
 
-  .accordion-button {
-    font-family: Fraunces;
-    font-weight: 900;
-    font-size: 28px;
-    color: #83888f;
-    background: transparent;
-    box-shadow: none;
-    padding: 24px 0;
-
-    &:not(.collapsed) {
+    .accordion-button {
+      font-family: Fraunces;
+      font-weight: 900;
+      font-size: 28px;
       color: #83888f;
       background: transparent;
       box-shadow: none;
+      padding: 24px 0;
+
+      &:not(.collapsed) {
+        color: #83888f;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      &::after {
+        filter: invert(41%) sepia(21%) saturate(1116%) hue-rotate(140deg) brightness(90%) contrast(90%);
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: transparent;
+      }
     }
 
-    &::after {
-      filter: invert(41%) sepia(21%) saturate(1116%) hue-rotate(140deg) brightness(90%) contrast(90%);
-    }
+    .accordion-body {
+      padding: 0 0 32px 0;
 
-    &:focus {
-      box-shadow: none;
-      border-color: transparent;
-    }
-  }
+      .options-grid {
+        display: flex;
+        gap: 20px;
 
-  .accordion-body {
-    padding: 0 0 32px 0;
+        .option-card {
+          flex: 1;
+          background: #f2efe9;
+          border-radius: 8px;
+          padding: 24px;
+          cursor: pointer;
 
-    .options-grid {
-      display: flex;
-      gap: 20px;
+          input[type="radio"] {
+            display: none;
+          }
 
-      .option-card {
-        flex: 1;
-        background: #f2efe9;
-        border-radius: 8px;
-        padding: 24px;
-        cursor: pointer;
+          h5 {
+            font-family: Fraunces;
+            font-weight: 900;
+            font-size: 20px;
+            color: #2c343e;
+            margin-bottom: 12px;
+          }
 
-        
-        input[type="radio"] {
-          display: none;
-        }
-
-        h5 {
-          font-family: Fraunces;
-          font-weight: 900;
-          font-size: 20px;
-          color: #2c343e;
-          margin-bottom: 12px;
-        }
-
-        p {
-          font-family: Barlow;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 150%;
-          color: #333d4b;
-          margin: 0;
-        }
-
-        &:has(input[type="radio"]:checked) {
-          background: #0E8784;
-
-          h5,
           p {
-            color: #FEFCF7;
+            font-family: Barlow;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #333d4b;
+            margin: 0;
+          }
+
+          &:has(input[type="radio"]:checked) {
+            background: #0e8784;
+
+            h5,
+            p {
+              color: #fefcf7;
+            }
           }
         }
       }
     }
-  }
 
- 
-  @media (max-width: 767.98px) {
-    flex-direction: column;
+    @media (max-width: 767.98px) {
+      flex-direction: column;
 
-    .accordion-button {
-      font-size: 20px;
-      padding: 18px 0;
-    }
+      .accordion-button {
+        font-size: 20px;
+        padding: 18px 0;
+      }
 
-    .accordion-body {
-      .options-grid {
-        flex-direction: column;
-        gap: 16px;
+      .accordion-body {
+        .options-grid {
+          flex-direction: column;
+          gap: 16px;
+        }
       }
     }
   }
+
+  .order-summary {
+    background: #2c343e;
+    border-radius: 12px;
+    padding: 32px 40px;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+
+    .summary-label {
+      display: block;
+      font-family: Barlow;
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #83888f;
+      margin-bottom: 12px;
+    }
+
+    .summary-text {
+      font-family: Fraunces;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 140%;
+      color: #fefcf7;
+      margin: 0;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 100px;
+      border-bottom: 2px solid #0e8784;
+    }
+
+    .ans {
+      display: none;
+      color: #0e8784;
+    }
+  }
+
+  .summary-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .create-plan-btn {
+    display: block;
+    width: fit-content;
+    margin: 24px 0 0 auto;
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0e8784;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+.summary-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(44, 52, 62, 0.516);
 }
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(254, 254, 255, 0);
+  cursor: pointer;
+}
+
+.summary-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 444px;
+  max-width: 90%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+  .modal-header {
+    background: #2c343e;
+    color: #fefcf7;
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 24px 32px;
+  }
+
+  .modal-body {
+    background: #fefcf7;
+    padding: 24px 32px 32px 32px;
+
+    .modal-text {
+      font-family: Fraunces;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 150%;
+      color: #2c343e;
+      margin-bottom: 16px;
+
+      .ans {
+        display: none;
+        color: #0e8784;
+        font-weight: 900;
+      }
+    }
+
+    .modal-note {
+      font-family: Barlow;
+      font-size: 13px;
+      line-height: 160%;
+      color: #83888f;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e5e2da;
+    }
+
+    .modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 22px;
+        color: #2c343e;
+
+        .price-unit {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .checkout-btn {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 14px;
+        color: #fff;
+        background-color: #0e8784;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .summary-toggle:checked ~ .summary-modal-overlay {
+    display: block;
+  }
+
+  &:has(input[name="coffee-preference"][value="capsule"]:checked) .ans-capsule,
+  &:has(input[name="coffee-preference"][value="filter"]:checked) .ans-filter,
+  &:has(input[name="coffee-preference"][value="espresso"]:checked) .ans-espresso,
+
+  &:has(input[name="coffee-type"][value="single-origin"]:checked) .ans-single-origin,
+  &:has(input[name="coffee-type"][value="decaf"]:checked) .ans-decaf,
+  &:has(input[name="coffee-type"][value="blended"]:checked) .ans-blended,
+
+  &:has(input[name="quantity"][value="250g"]:checked) .ans-250g,
+  &:has(input[name="quantity"][value="500g"]:checked) .ans-500g,
+  &:has(input[name="quantity"][value="1000g"]:checked) .ans-1000g,
+
+  &:has(input[name="grind"][value="wholebean"]:checked) .ans-wholebean,
+  &:has(input[name="grind"][value="filter"]:checked) .ans-grindfilter,
+  &:has(input[name="grind"][value="cafetiere"]:checked) .ans-cafetiere,
+
+  &:has(input[name="delivery"][value="weekly"]:checked) .ans-weekly,
+  &:has(input[name="delivery"][value="two-weeks"]:checked) .ans-two-weeks,
+  &:has(input[name="delivery"][value="monthly"]:checked) .ans-monthly {
+    display: inline;
+  }
+}
+body:has(#summary-toggle:checked) {
+  overflow: hidden;
+}
+
 #footer {
   h1 {
     color: #ffffff;

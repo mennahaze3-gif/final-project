@@ -179,300 +179,303 @@
         </div>
       </div>
     </section>
-    <section class="py-5" id="section8">
-      <div class="container d-flex ">
-        <div class="list-group steps-list" style="width: 251.81px">
-          <div
-            class="list-group-item d-flex align-items-center gap-3 active-step"
+<section class="py-5" id="section8">
+
+  <!-- checkbox مخفي بيتحكم في المودال -->
+  <input type="checkbox" id="summary-toggle" class="summary-toggle" />
+
+  <div class="container d-flex">
+    <div class="list-group steps-list" style="width: 251.81px">
+      <div class="list-group-item d-flex align-items-center gap-3 active-step">
+        <span class="step-number">01</span>
+        <span class="step-title">Preferences</span>
+      </div>
+
+      <div class="list-group-item d-flex align-items-center gap-3">
+        <span class="step-number">02</span>
+        <span class="step-title">Bean Type</span>
+      </div>
+
+      <div class="list-group-item d-flex align-items-center gap-3">
+        <span class="step-number">03</span>
+        <span class="step-title">Quantity</span>
+      </div>
+
+      <div class="list-group-item d-flex align-items-center gap-3">
+        <span class="step-number">04</span>
+        <span class="step-title">Grind Option</span>
+      </div>
+
+      <div class="list-group-item d-flex align-items-center gap-3">
+        <span class="step-number">05</span>
+        <span class="step-title">Deliveries</span>
+      </div>
+    </div>
+
+    <div class="accordion" id="coffeeAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
           >
-            <span class="step-number">01</span>
-            <span class="step-title">Preferences</span>
-          </div>
+            How do you drink your coffee?
+          </button>
+        </h2>
 
-          <div class="list-group-item d-flex align-items-center gap-3">
-            <span class="step-number">02</span>
-            <span class="step-title">Bean Type</span>
-          </div>
+        <div id="collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="coffee-preference" value="capsule" />
+                <h5>Capsule</h5>
+                <p>Compatible with Nespresso systems and similar brewers</p>
+              </label>
 
-          <div class="list-group-item d-flex align-items-center gap-3">
-            <span class="step-number">03</span>
-            <span class="step-title">Quantity</span>
-          </div>
+              <label class="option-card">
+                <input type="radio" name="coffee-preference" value="filter" />
+                <h5>Filter</h5>
+                <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+              </label>
 
-          <div class="list-group-item d-flex align-items-center gap-3">
-            <span class="step-number">04</span>
-            <span class="step-title">Grind Option</span>
-          </div>
-
-          <div class="list-group-item d-flex align-items-center gap-3">
-            <span class="step-number">05</span>
-            <span class="step-title">Deliveries</span>
-          </div>
-        </div>
-
-        <div class="accordion" id="coffeeAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                How do you drink your coffee?
-              </button>
-            </h2>
-
-            <div id="collapseOne" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <div class="options-grid">
-                  <label class="option-card">
-                    <input
-                      type="radio"
-                      name="coffee-preference"
-                      value="capsule"
-                    />
-
-                    <h5>Capsule</h5>
-                    <p>Compatible with Nespresso systems and similar brewers</p>
-                  </label>
-
-                  <label class="option-card">
-                    <input
-                      type="radio"
-                      name="coffee-preference"
-                      value="filter"
-                    />
-
-                    <h5>Filter</h5>
-                    <p>
-                      For pour over or drip methods like Aeropress, Chemex, and
-                      V60
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input
-                      type="radio"
-                      name="coffee-preference"
-                      value="espresso"
-                    />
-
-                    <h5>Espresso</h5>
-                    <p>
-                      Dense and finely ground beans for an intense, flavorful
-                      experience
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                What type of coffee?
-              </button>
-            </h2>
-
-            <div id="collapseTwo" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="options-grid">
-                  <label class="option-card">
-                    <input
-                      type="radio"
-                      name="coffee-type"
-                      value="single-origin"
-                    />
-
-                    <h5>Single Origin</h5>
-                    <p>
-                      Distinct, high quality coffee from a specific family-owned
-                      farm
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="coffee-type" value="decaf" />
-
-                    <h5>Decaf</h5>
-                    <p>
-                      Just like regular coffee, except the caffeine has been
-                      removed
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="coffee-type" value="blended" />
-
-                    <h5>Blended</h5>
-                    <p>
-                      Combination of two or three dark roasted beans of organic
-                      coffees
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                How much would you like?
-              </button>
-            </h2>
-
-            <div id="collapseThree" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="options-grid">
-                  <label class="option-card">
-                    <input type="radio" name="quantity" value="250g" />
-
-                    <h5>250g</h5>
-                    <p>
-                      Perfect for the solo drinker. Yields about 12 delicious
-                      cups.
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="quantity" value="500g" />
-
-                    <h5>500g</h5>
-                    <p>
-                      Perfect option for a couple. Yields about 40 delectable
-                      cups.
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="quantity" value="1000g" />
-
-                    <h5>1000g</h5>
-                    <p>
-                      Perfect for offices and events. Yields about 90 delightful
-                      cups.
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Want us to grind them?
-              </button>
-            </h2>
-
-            <div id="collapseFour" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="options-grid">
-                  <label class="option-card">
-                    <input type="radio" name="grind" value="wholebean" />
-
-                    <h5>Wholebean</h5>
-                    <p>
-                      Best choice if you cherish the full sensory experience
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="grind" value="filter" />
-
-                    <h5>Filter</h5>
-                    <p>
-                      For drip or pour-over coffee methods such as V60 or
-                      Aeropress
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="grind" value="cafetiere" />
-
-                    <h5>Cafetiére</h5>
-                    <p>
-                      Course ground beans specially suited for french press
-                      coffee
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                How often should we deliver?
-              </button>
-            </h2>
-
-            <div id="collapseFive" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="options-grid">
-                  <label class="option-card">
-                    <input type="radio" name="delivery" value="weekly" />
-
-                    <h5>Every week</h5>
-                    <p>
-                      $7.20 per shipment. Includes free first-class shipping.
-                    </p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="delivery" value="two-weeks" />
-
-                    <h5>Every 2 weeks</h5>
-                    <p>$9.60 per shipment. Includes free priority shipping.</p>
-                  </label>
-
-                  <label class="option-card">
-                    <input type="radio" name="delivery" value="monthly" />
-
-                    <h5>Every month</h5>
-                    <p>$12.00 per shipment. Includes free priority shipping.</p>
-                  </label>
-                </div>
-              </div>
+              <label class="option-card">
+                <input type="radio" name="coffee-preference" value="espresso" />
+                <h5>Espresso</h5>
+                <p>Dense and finely ground beans for an intense, flavorful experience</p>
+              </label>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            What type of coffee?
+          </button>
+        </h2>
+
+        <div id="collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="coffee-type" value="single-origin" />
+                <h5>Single Origin</h5>
+                <p>Distinct, high quality coffee from a specific family-owned farm</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="coffee-type" value="decaf" />
+                <h5>Decaf</h5>
+                <p>Just like regular coffee, except the caffeine has been removed</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="coffee-type" value="blended" />
+                <h5>Blended</h5>
+                <p>Combination of two or three dark roasted beans of organic coffees</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            How much would you like?
+          </button>
+        </h2>
+
+        <div id="collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="quantity" value="250g" />
+                <h5>250g</h5>
+                <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="quantity" value="500g" />
+                <h5>500g</h5>
+                <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="quantity" value="1000g" />
+                <h5>1000g</h5>
+                <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+          >
+            Want us to grind them?
+          </button>
+        </h2>
+
+        <div id="collapseFour" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="grind" value="wholebean" />
+                <h5>Wholebean</h5>
+                <p>Best choice if you cherish the full sensory experience</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="grind" value="filter" />
+                <h5>Filter</h5>
+                <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="grind" value="cafetiere" />
+                <h5>Cafetiére</h5>
+                <p>Course ground beans specially suited for french press coffee</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseFive"
+          >
+            How often should we deliver?
+          </button>
+        </h2>
+
+        <div id="collapseFive" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="delivery" value="weekly" />
+                <h5>Every week</h5>
+                <p>$7.20 per shipment. Includes free first-class shipping.</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="two-weeks" />
+                <h5>Every 2 weeks</h5>
+                <p>$9.60 per shipment. Includes free priority shipping.</p>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="delivery" value="monthly" />
+                <h5>Every month</h5>
+                <p>$12.00 per shipment. Includes free priority shipping.</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <span class="summary-label">ORDER SUMMARY</span>
+        <p class="summary-text">
+          "I drink my coffee using
+          <span class="blank">
+            <span class="ans ans-capsule">Capsule</span>
+            <span class="ans ans-filter">Filter</span>
+            <span class="ans ans-espresso">Espresso</span> </span
+          >, with a
+          <span class="blank">
+            <span class="ans ans-single-origin">Single Origin</span>
+            <span class="ans ans-decaf">Decaf</span>
+            <span class="ans ans-blended">Blended</span>
+          </span>
+          type of bean.
+          <span class="blank">
+            <span class="ans ans-250g">250g</span>
+            <span class="ans ans-500g">500g</span>
+            <span class="ans ans-1000g">1000g</span> </span
+          >, sent to me
+          <span class="blank">
+            <span class="ans ans-weekly">Every Week</span>
+            <span class="ans ans-two-weeks">Every 2 Weeks</span>
+            <span class="ans ans-monthly">Every Month</span> </span
+          >."
+        </p>
+      </div>
+
+      <!-- زرار Create your plan -->
+      <label for="summary-toggle" class="create-plan-btn">Create your plan</label>
+    </div>
+  </div>
+
+  <!-- المودال -->
+  <div class="summary-modal-overlay">
+    <label for="summary-toggle" class="modal-backdrop"></label>
+
+    <div class="summary-modal">
+      <div class="modal-header">
+        <span>Order Summary</span>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-text">
+          "I drink my coffee as
+          <span class="ans ans-capsule">Capsule</span><span class="ans ans-filter">Filter</span><span class="ans ans-espresso">Espresso</span>,
+          with a
+          <span class="ans ans-single-origin">Single Origin</span><span class="ans ans-decaf">Decaf</span><span class="ans ans-blended">Blended</span>
+          type of bean.
+          <span class="ans ans-250g">250g</span><span class="ans ans-500g">500g</span><span class="ans ans-1000g">1000g</span>
+          ground ala
+          <span class="ans ans-wholebean">Wholebean</span><span class="ans ans-grindfilter">Filter</span><span class="ans ans-cafetiere">Cafetiére</span>,
+          sent to me
+          <span class="ans ans-weekly">Every Week</span><span class="ans ans-two-weeks">Every 2 Weeks</span><span class="ans ans-monthly">Every Month</span>."
+        </p>
+
+        <p class="modal-note">
+          Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.
+        </p>
+
+        <div class="modal-footer">
+          <span class="price">$14.00<span class="price-unit">/ mo</span></span>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <footer class="py-5 px-2" id="footer">
       <div
         class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-4"
